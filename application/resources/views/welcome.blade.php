@@ -81,18 +81,7 @@
                 <div class="title m-b-md">
                     Diagrama
                 </div>
-                <form>
-                    <select>
-                        <option>Resenha</option>
-                        <option>Carta</option>
-                        <option>Artigo</option>
-                        <option>Original</option>
-                    </select>
-                    <textarea>
-                        
-                    </textarea>
-                </form>
-
+                
                 <div class="links">
                     <a href="{{ url('/xml') }}">XML Test</a>
                 </div>
