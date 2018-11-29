@@ -356,3 +356,7 @@ Route::get('/xml', function () {
                   ->header('Content-Type', 'text/xml');
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
