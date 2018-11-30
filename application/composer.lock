@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "590fb93858f7e2ca5b3b8b0f8798026c",
+    "content-hash": "e8948cbb3014927ec2664014f3881604",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -882,6 +882,58 @@
             "time": "2018-11-22T18:23:02+00:00"
         },
         {
+            "name": "netojose/laravel-bootstrap-4-forms",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/netojose/laravel-bootstrap-4-forms.git",
+                "reference": "5d14f8d3b1c2e4edc00a16e9f78667d52fdd81d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/netojose/laravel-bootstrap-4-forms/zipball/5d14f8d3b1c2e4edc00a16e9f78667d52fdd81d2",
+                "reference": "5d14f8d3b1c2e4edc00a16e9f78667d52fdd81d2",
+                "shasum": ""
+            },
+            "type": "package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "NetoJose\\Bootstrap4Forms\\Bootstrap4FormsServiceProvider"
+                    ],
+                    "aliases": {
+                        "Form": "NetoJose\\Bootstrap4Forms\\Bootstrap4FormsFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NetoJose\\Bootstrap4Forms\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "José Sousa",
+                    "email": "sputinykster@gmail.com"
+                }
+            ],
+            "description": "Bootstrap 4 form builder for Laravel 5",
+            "keywords": [
+                "Forms",
+                "bootstrap",
+                "composer",
+                "form-builder",
+                "laravel",
+                "package",
+                "php"
+            ],
+            "time": "2018-09-22T07:09:20+00:00"
+        },
+        {
             "name": "nikic/php-parser",
             "version": "v4.1.0",
             "source": {
@@ -1390,16 +1442,16 @@
         },
         {
             "name": "spatie/array-to-xml",
-            "version": "2.7.3",
+            "version": "2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/array-to-xml.git",
-                "reference": "bb5b3548ae7871750285a3f623c28ec50a14c227"
+                "reference": "c7dc15c460eeaf0fa8f8f2d0606155d48f93a9bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/array-to-xml/zipball/bb5b3548ae7871750285a3f623c28ec50a14c227",
-                "reference": "bb5b3548ae7871750285a3f623c28ec50a14c227",
+                "url": "https://api.github.com/repos/spatie/array-to-xml/zipball/c7dc15c460eeaf0fa8f8f2d0606155d48f93a9bd",
+                "reference": "c7dc15c460eeaf0fa8f8f2d0606155d48f93a9bd",
                 "shasum": ""
             },
             "require": {
@@ -1435,7 +1487,7 @@
                 "convert",
                 "xml"
             ],
-            "time": "2018-10-29T10:28:24+00:00"
+            "time": "2018-11-29T16:24:53+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

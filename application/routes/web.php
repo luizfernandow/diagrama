@@ -359,4 +359,8 @@ Route::get('/xml', function () {
 
 Auth::routes();
 
+Route::resource('projects', 'ProjectController');
+Route::get('/journals', 'JournalController@index')->name('journals.index');
+Route::post('/journals', 'JournalController@update')->name('journals.update');
+
 Route::get('/home', 'HomeController@index')->name('home');
