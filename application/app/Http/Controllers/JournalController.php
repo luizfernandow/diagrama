@@ -39,26 +39,36 @@ class JournalController extends Controller
      */
     public function update(Request $request)
     {   
+        $request->validate([
+            'csv_journals' => 'required|mimes:csv,txt',
+        ]);
+
         $path = $request->file('csv_journals')->getRealPath();
-        $data = array_map('str_getcsv', file($path));
-        $data = array_map(function($value) {
-            return explode("\t", $value[0]);
-        }, $data);
+        try {
+            $data = array_map('str_getcsv', file($path));
+            $data = array_map(function($value) {
+                return explode("\t", $value[0]);
+            }, $data);            
+        } catch (Exception $e) {
+            $data = [];
+        }
         foreach ($data as $key => $value) {
-            Journal::firstOrCreate([
-                'symbol' => array_get($value, 0, null),
-                'issn' => array_get($value, 1, null),
-                'print_issn' => array_get($value, 2, null),
-                'e_issn' => array_get($value, 3, null),
-                'collection_name' => array_get($value, 4, null),
-                'acronym' => array_get($value, 5, null),
-                'short_title' => array_get($value, 6, null),
-                'title' => array_get($value, 7, null),
-                'short_title_nlm' => array_get($value, 8, null),
-                'publisher' => array_get($value, 9, null),
-                'url_journal_page' => array_get($value, 10, null),
-                'license' => array_get($value, 11, null),
-            ]);
+            if (count($value) > 5) {
+                Journal::firstOrCreate([
+                    'symbol' => array_get($value, 0, null),
+                    'issn' => array_get($value, 1, null),
+                    'print_issn' => array_get($value, 2, null),
+                    'e_issn' => array_get($value, 3, null),
+                    'collection_name' => array_get($value, 4, null),
+                    'acronym' => array_get($value, 5, null),
+                    'short_title' => array_get($value, 6, null),
+                    'title' => array_get($value, 7, null),
+                    'short_title_nlm' => array_get($value, 8, null),
+                    'publisher' => array_get($value, 9, null),
+                    'url_journal_page' => array_get($value, 10, null),
+                    'license' => array_get($value, 11, null),
+                ]);                
+            }
         }
 
         return redirect('journals');
