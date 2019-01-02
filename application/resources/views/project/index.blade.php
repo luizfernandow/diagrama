@@ -1,13 +1,13 @@
-@extends('layouts.app')
+@extends('layouts.default')
+
+@section('breadcrumbs', Breadcrumbs::render('projects'))
 
 @section('content')
-<div class="container">
-    <div class="card">
-        <div class="card-header">Projetos</div>
+<div class="card">
+    <div class="card-header">Projetos</div>
 
-        <div class="card-body">
-           
-        </div>
+    <div class="card-body">
+       
     </div>
 </div>
 @endsection
