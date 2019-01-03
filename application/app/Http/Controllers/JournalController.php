@@ -25,9 +25,16 @@ class JournalController extends Controller
      */
     public function index(Request $request)
     {
-        $journals = Journal::orderBy('short_title', 'ASC')->paginate(5);
-        return view('journal.index', compact('journals'))
-               ->with('i', ($request->input('page', 1) - 1) * 5);
+        $title = $request->input('title', null);
+        $journals = Journal::orderBy('short_title', 'ASC');
+        
+        if ($title) {
+            $journals->where('short_title', 'like', '%' . $title . '%');    
+        }
+
+        $journals = $journals->paginate(20);
+        return view('journal.index', compact('journals', 'title'))
+               ->with('i', ($request->input('page', 1) - 1) * 20);
     }
 
 

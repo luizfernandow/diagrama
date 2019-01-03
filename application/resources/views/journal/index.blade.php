@@ -12,6 +12,12 @@
     		{!! Form::submit("Upload csv") !!}
     	{!! Form::close() !!}
 
+        {!! Form::open()->get()->route('journals.index')->attrs(['class' => 'mt-5'])->fill(['title' => $title]) !!}
+            {!! Form::text('title')->placeholder('Title') !!}
+            {!! Form::submit("Filter") !!}
+        {!! Form::close() !!}
+
+
     	<div class="table-responsive mt-5">
             <table class="table table-bordered">
                 <thead>
@@ -36,7 +42,7 @@
             </table>
         </div>
         <div class="text-center">
-            {!! $journals->links() !!}
+            {!! $journals->appends(['title' => $title])->links() !!}
         </div>           
     </div>
 </div>
