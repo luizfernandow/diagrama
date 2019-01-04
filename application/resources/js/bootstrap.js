@@ -12,6 +12,7 @@ try {
 
     require('bootstrap');
  	require('@coreui/coreui');
+  	require('chosen-js');
 
 } catch (e) {}
 

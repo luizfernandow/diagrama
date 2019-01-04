@@ -12,7 +12,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        $adminEmail = 'admin@diagrama.com.br';
+        $adminEmail = 'admin@diagramaeditorial.com.br';
 
         $user = User::where('email', $adminEmail)
                     ->limit(1)

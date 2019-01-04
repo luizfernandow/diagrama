@@ -3,6 +3,9 @@
 return [
 
     'home' => 'Pagina inicial',
-    'projects' => 'Projetos',
+    'projects' => [
+    	'index' => 'Projetos',
+    	'create' => 'Criar',
+    ],
     'journals' => 'Periodicos'
 ];
