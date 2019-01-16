@@ -15,5 +15,6 @@ return [
     	'journal' => 'Periodico',
     	'actions' => 'Ações',
     	'xml' => 'Xml',
+        'empty' => 'Lista vazia'
     ],
 ];

@@ -94,14 +94,14 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
-  * CoreUI v2.1.4 (https://coreui.io)
-  * Copyright 2018 Łukasz Holeczek
+  * CoreUI v2.1.6 (https://coreui.io)
+  * Copyright 2019 Łukasz Holeczek
   * Licensed under MIT (https://coreui.io)
   */
 (function (global, factory) {
    true ? factory(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! perfect-scrollbar */ "./node_modules/perfect-scrollbar/dist/perfect-scrollbar.esm.js")) :
   undefined;
-}(this, (function (exports,$,PerfectScrollbar) { 'use strict';
+}(this, function (exports, $, PerfectScrollbar) { 'use strict';
 
   $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
   PerfectScrollbar = PerfectScrollbar && PerfectScrollbar.hasOwnProperty('default') ? PerfectScrollbar['default'] : PerfectScrollbar;
@@ -121,7 +121,7 @@
   }
 
   var _core = createCommonjsModule(function (module) {
-  var core = module.exports = { version: '2.6.0' };
+  var core = module.exports = { version: '2.6.1' };
   if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
   });
   var _core_1 = _core.version;
@@ -628,7 +628,7 @@
 
   // @@split logic
   _fixReWks('split', 2, function (defined, SPLIT, $split, maybeCallNative) {
-    var internalSplit = $split;
+    var internalSplit;
     if (
       'abbc'[$SPLIT](/(b)*/)[1] == 'c' ||
       'test'[$SPLIT](/(?:)/, -1)[LENGTH] != 4 ||
@@ -674,6 +674,8 @@
       internalSplit = function (separator, limit) {
         return separator === undefined && limit === 0 ? [] : $split.call(this, separator, limit);
       };
+    } else {
+      internalSplit = $split;
     }
 
     return [
@@ -1400,7 +1402,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI (v2.1.4): ajax-load.js
+   * CoreUI (v2.1.6): ajax-load.js
    * Licensed under MIT (https://coreui.io/license)
    * --------------------------------------------------------------------------
    */
@@ -1412,7 +1414,7 @@
      * ------------------------------------------------------------------------
      */
     var NAME = 'ajaxLoad';
-    var VERSION = '2.1.4';
+    var VERSION = '2.1.6';
     var DATA_KEY = 'coreui.ajaxLoad';
     var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
     var ClassName = {
@@ -1532,8 +1534,8 @@
 
       _proto.loadTop = function loadTop(url) {
         window.location = url;
-      }; // Private
-
+      } // Private
+      ;
 
       _proto._getConfig = function _getConfig(config) {
         config = Object.assign({}, Default, config);
@@ -1555,8 +1557,8 @@
             _this.setUpUrl(event.currentTarget.getAttribute('href'));
           }
         });
-      }; // Static
-
+      } // Static
+      ;
 
       AjaxLoad._jQueryInterface = function _jQueryInterface(config) {
         return this.each(function () {
@@ -1605,7 +1607,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI (v2.1.4): toggle-classes.js
+   * CoreUI (v2.1.6): toggle-classes.js
    * Licensed under MIT (https://coreui.io/license)
    * --------------------------------------------------------------------------
    */
@@ -1630,7 +1632,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI (v2.1.4): aside-menu.js
+   * CoreUI (v2.1.6): aside-menu.js
    * Licensed under MIT (https://coreui.io/license)
    * --------------------------------------------------------------------------
    */
@@ -1642,7 +1644,7 @@
      * ------------------------------------------------------------------------
      */
     var NAME = 'aside-menu';
-    var VERSION = '2.1.4';
+    var VERSION = '2.1.6';
     var DATA_KEY = 'coreui.aside-menu';
     var EVENT_KEY = "." + DATA_KEY;
     var DATA_API_KEY = '.data-api';
@@ -1684,8 +1686,8 @@
           var toggle = event.currentTarget.dataset ? event.currentTarget.dataset.toggle : $$$1(event.currentTarget).data('toggle');
           toggleClasses(toggle, ShowClassNames);
         });
-      }; // Static
-
+      } // Static
+      ;
 
       AsideMenu._jQueryInterface = function _jQueryInterface() {
         return this.each(function () {
@@ -1860,7 +1862,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI Utilities (v2.1.4): get-css-custom-properties.js
+   * CoreUI Utilities (v2.1.6): get-css-custom-properties.js
    * Licensed under MIT (https://coreui.io/license)
    * @returns {string} css custom property name
    * --------------------------------------------------------------------------
@@ -1928,7 +1930,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI (v2.1.4): sidebar.js
+   * CoreUI (v2.1.6): sidebar.js
    * Licensed under MIT (https://coreui.io/license)
    * --------------------------------------------------------------------------
    */
@@ -1940,7 +1942,7 @@
      * ------------------------------------------------------------------------
      */
     var NAME = 'sidebar';
-    var VERSION = '2.1.4';
+    var VERSION = '2.1.6';
     var DATA_KEY = 'coreui.sidebar';
     var EVENT_KEY = "." + DATA_KEY;
     var DATA_API_KEY = '.data-api';
@@ -2083,8 +2085,8 @@
             });
           }
         });
-      }; // Private
-
+      } // Private
+      ;
 
       _proto._addMediaQuery = function _addMediaQuery() {
         var sm = getStyle('--breakpoint-sm');
@@ -2173,8 +2175,8 @@
 
           document.body.classList.remove('sidebar-show');
         });
-      }; // Static
-
+      } // Static
+      ;
 
       Sidebar._jQueryInterface = function _jQueryInterface() {
         return this.each(function () {
@@ -2228,7 +2230,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI Utilities (v2.1.4): hex-to-rgb.js
+   * CoreUI Utilities (v2.1.6): hex-to-rgb.js
    * Licensed under MIT (https://coreui.io/license)
    * --------------------------------------------------------------------------
    */
@@ -2264,7 +2266,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI Utilities (v2.1.4): hex-to-rgba.js
+   * CoreUI Utilities (v2.1.6): hex-to-rgba.js
    * Licensed under MIT (https://coreui.io/license)
    * --------------------------------------------------------------------------
    */
@@ -2331,7 +2333,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI (v2.1.4): rgb-to-hex.js
+   * CoreUI (v2.1.6): rgb-to-hex.js
    * Licensed under MIT (https://coreui.io/license)
    * --------------------------------------------------------------------------
    */
@@ -2360,7 +2362,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI (v2.1.4): index.js
+   * CoreUI (v2.1.6): index.js
    * Licensed under MIT (https://coreui.io/license)
    * --------------------------------------------------------------------------
    */
@@ -2392,7 +2394,7 @@
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
-})));
+}));
 //# sourceMappingURL=coreui.js.map
 
 

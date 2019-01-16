@@ -31,7 +31,7 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="2" class="text-center">@lang('projects.table.empty')</td>
+                        <td colspan="3" class="text-center">@lang('projects.table.empty')</td>
                     </tr>
                 @endforelse
                 </tbody>
