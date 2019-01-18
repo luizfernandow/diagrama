@@ -17,6 +17,7 @@ class CreateProjectsTable extends Migration
             $table->increments('id');
             $table->string('name', 256);
             $table->unsignedInteger('journal_id');
+            $table->string('article_type', 64);
 
             $table->timestamps();
             $table->foreign('journal_id')->references('id')->on('journals');

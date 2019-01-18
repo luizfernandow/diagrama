@@ -6,6 +6,7 @@ return [
     'projects' => [
     	'index' => 'Projetos',
     	'create' => 'Criar',
+    	'edit' => 'Editar',
     ],
     'journals' => 'Periodicos'
 ];

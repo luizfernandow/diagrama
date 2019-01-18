@@ -21,3 +21,8 @@ Breadcrumbs::for('projects.create', function ($trail) {
 	$trail->parent('projects.index');
     $trail->push(__('breadcrumbs.projects.create'), route('projects.create'));
 });
+
+Breadcrumbs::for('projects.edit', function ($trail, $project) {
+	$trail->parent('projects.index');
+    $trail->push(__('breadcrumbs.projects.edit'), route('projects.edit', $project->id));
+});

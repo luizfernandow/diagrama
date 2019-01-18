@@ -4,7 +4,7 @@
 
 @section('content')
 
-{!! Form::anchor(__('projects.create'))->route('projects.create')->attrs(['class' => 'mb-2']) !!}
+{!! Form::anchor('<i class="fas fa-plus"></i> ' . __('projects.create'))->route('projects.create')->attrs(['class' => 'mb-2']) !!}
 
 <div class="card">
     <div class="card-header">Projetos</div>
@@ -27,6 +27,7 @@
                         <td>{{ $project->journal->title }}</td>
                         <td>
                         	{!! Form::anchor('<i class="fas fa-file-code"></i> ' . __('projects.table.xml'))->route('projects.xml', ['project' => $project->id])->info() !!}
+                            {!! Form::anchor('<i class="fas fa-edit"></i> ' . __('projects.table.edit'))->route('projects.edit', ['project' => $project->id])->info() !!}
                         </td>
                     </tr>
                 @empty

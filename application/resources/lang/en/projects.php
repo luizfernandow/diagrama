@@ -3,10 +3,12 @@
 return [
 
     'create' => 'Criar projeto',
+    'edit' => 'Editar projeto',
 
     'form' => [
     	'name' => 'Nome',
     	'journal' => 'Periodico',
+        'article_type' => 'Tipo de artigo XML',
     	'save' => 'Salvar',
     ],
 
@@ -15,6 +17,7 @@ return [
     	'journal' => 'Periodico',
     	'actions' => 'Ações',
     	'xml' => 'Xml',
-        'empty' => 'Lista vazia'
+        'empty' => 'Lista vazia',
+        'edit' => 'Editar'
     ],
 ];
